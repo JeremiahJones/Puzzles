@@ -27,19 +27,16 @@ func matrix() {
 
 	//loop through the given string slice and iterate to find coordinates
 	for _, v := range givenString {
-		findCoordinateFromString(v, Coordinates)
+		findCoordinateFromString(string(v), Coordinates)
 	}
-
-	fmt.Println(Coordinates[5][0])
 }
 
-func findCoordinateFromString(givenStringValue string, coordinates [][]string) [][]string {
-	for ind, val := range coordinates {
-		if val == givenStringValue {
-			fmt.Println(ind)
-			return ind
+func findCoordinateFromString(givenStringValue string, coordinates [][]string) {
+	for co1, val1 := range coordinates {
+		for co2, val2 := range val1 {
+			if val2 == givenStringValue {
+				fmt.Println(co1, co2)
+			}
 		}
-		return ""
 	}
-	return ""
 }
