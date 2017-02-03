@@ -1,8 +1,8 @@
 package staircase
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
 
 func printStairCase(number int) (tempSlice []string) {

@@ -5,10 +5,12 @@ import (
 	"strings"
 )
 
-var coordinates [][]string
-var stringCoordinates [][]int
-var directionCoordinates [][]int
-var printableDirections []string
+var (
+	coordinates          [][]string
+	stringCoordinates    [][]int
+	directionCoordinates [][]int
+	printableDirections  []string
+)
 
 func matrix(givenWord string) {
 	startingPosition := "a"
@@ -47,7 +49,9 @@ func matrix(givenWord string) {
 	for _, val1 := range directionCoordinates {
 		directions := []int{val1[0], val1[1]}
 		letterDirections := printDirections(directions)
-		printableDirections = append(printableDirections, letterDirections)
+		if letterDirections != "" {
+			printableDirections = append(printableDirections, letterDirections)
+		}
 	}
 
 	fmt.Println(printableDirections)
