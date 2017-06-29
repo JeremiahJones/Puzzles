@@ -1,6 +1,4 @@
 # Puzzles
-Coding puzzles found online and from job interviews.
-
 The Goplayground links are so you can see how they work online without having go installed.
 (to run the tests manually, copy the repository, navigate to the puzzle folder and run `go test` and it will print the answer)
 
